@@ -1,10 +1,6 @@
 import datetime
 import json
 
-def print_record(record):
-    print(record)
-    return record
-
 def diff_timestamp_ac(input_ts: str, interval=15):
     """
     :input_ts: string timestamp

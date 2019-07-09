@@ -9,5 +9,3 @@
 { "timestamp": "2019-01-01 14:16:00", "customer": "customer-3", "page": "product", "product": "product-5" }
 { "timestamp": "2019-01-01 14:20:00", "customer": "customer-3", "page": "basket", "product": "product-4" }
 { "timestamp": "2019-01-01 14:21:00", "customer": "customer-3", "page": "checkout" }
-{ "timestamp": "2019-01-01 23:00:00", "customer": "customer-4", "page": "product", "product": "product-2" }
-{ "timestamp": "2019-01-01 20:08:00", "customer": "customer-4", "page": "basket", "product": "product-2" }

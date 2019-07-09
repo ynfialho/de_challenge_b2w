@@ -20,8 +20,10 @@ def setting_log(flag_stdout=True, flag_logfile=False):
 
     if flag_stdout:
         handler_list.append(logging.StreamHandler(stdout))
-        logging.basicConfig(
-            level=logging.INFO\
-            ,format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s'\
-            ,handlers=handler_list)    
+        
+    logging.basicConfig(
+        level=logging.INFO\
+        ,format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s'\
+        ,handlers=handler_list)    
+        
     return LOGGER
