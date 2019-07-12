@@ -9,6 +9,14 @@ Através da API do Apache Beam para Python, foi desenvolvido um job que, a parti
 ## Pre requisitos
 * Python 3.7
 
-## Execução
-`python job.py`
+## Instalação
+    git clone https://github.com/ynfialho/de_challenge_b2w.git
+    cd de_challenge_b2w
 
+    python3 -m pip install -r requirements.txt
+
+## Como executar
+    python3 process_abandoned_carts.py
+
+### Teste
+    python3 -m unittest discover

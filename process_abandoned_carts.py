@@ -1,6 +1,19 @@
 from __future__ import absolute_import
+import argparse
+import json
+import logging
+from dateutil.parser import parse
+import datetime
 
-def process_abandoned_carts(argv=None):
+from common.utils import diff_timestamp_ac, format_output
+from common.beam_utils import BeamJsonCoder, BeamExcludeCheckout
+from common.logger import setting_log    
+import apache_beam as beam
+from apache_beam.options.pipeline_options import PipelineOptions
+
+LOGGER = setting_log(flag_stdout=True, flag_logfile=True)
+
+def run(argv=None):
     try:
         parser = argparse.ArgumentParser()
         parser.add_argument('--input',
@@ -39,17 +52,4 @@ def process_abandoned_carts(argv=None):
         LOGGER.error(e)      
 
 if __name__ == "__main__":
-    import argparse
-    import json
-    import logging
-    from dateutil.parser import parse
-    import datetime
-
-    from common.utils import diff_timestamp_ac, format_output
-    from common.beam_utils import BeamJsonCoder, BeamExcludeCheckout
-    from common.logger import setting_log    
-    import apache_beam as beam
-    from apache_beam.options.pipeline_options import PipelineOptions
-
-    LOGGER = setting_log(flag_stdout=True, flag_logfile=True)
-    process_abandoned_carts()
+    run()

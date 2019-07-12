@@ -16,5 +16,8 @@ def diff_timestamp_ac(input_ts: str, interval=15):
         return False
 
 def format_output(event):
+    """
+    Format output job
+    """
     result = {'timestamp': event[1].isoformat(' '), 'customer': event[0][0], 'product': event[0][1] }
     return json.dumps(result)
